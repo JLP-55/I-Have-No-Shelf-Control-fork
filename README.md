@@ -14,7 +14,9 @@
 
 ## 1. Description
 
-<span style="color:red"> *Add description*</span>
+```diff
+- Add project description here
+```
 
 ## 2. Badges
 
@@ -24,7 +26,9 @@
 
 ## 3. Visuals
 
-<span style="color:red"> *Add screenshots or videos*</span>
+```diff
+- Add screenshots or videos here
+```
 
 ## 4. Usage and Installation
 
@@ -75,4 +79,6 @@ Distributed under the MIT License. See LICENSE.txt for more information.
 
 ## 9. Project status
 
-<span style="color:red"> *This project is currently development*</span>
+```diff
+- This project is currently development
+```
