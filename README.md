@@ -69,6 +69,7 @@ Installation instructions:
     - MySql database: SOURCE db/schema.sql
     - Exit;
     - npm run seed
+- Add     "watch": "nodemon server.js"   to package-json, under "scripts"
 - APP: 
     * npm run watch [for nodemon server] 
     * npm start [for regular server]
