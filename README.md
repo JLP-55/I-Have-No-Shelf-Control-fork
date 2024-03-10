@@ -1,3 +1,30 @@
+============================= NOTES =========================
+
+```diff
+- delete this section when finished
+```
+
+Make a .env file and paste this into it:
+
+DB_NAME='museum_db'   \
+DB_USER='root'        \
+DB_PASSWORD=''      
+
+Files/folders that can probably remain unchanged:
+
+- Connection.js
+- Server.js
+-	Entire utils folder:
+    - utils/Auth.js
+    - utils/Helpers.js
+- User-routes.js
+- Controllers/api:
+   - controllers/api/User-routes.js
+   - controllers/api/Index.js
+
+
+============================= NOTES =========================
+
 # I Have No Shelf Control Book Review Database
 
 ## Table of Contents
