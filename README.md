@@ -1,8 +1,8 @@
 You need to make a .env file and paste this into it:
 
-DB_NAME='museum_db'
-DB_USER='root'
-DB_PASSWORD=''
+DB_NAME='museum_db'   \
+DB_USER='root'        \
+DB_PASSWORD=''         \
 
 ===================================================================
 
