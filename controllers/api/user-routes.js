@@ -3,25 +3,54 @@ const { User } = require('../../models');
 
 // prerequisites for nodemailer if end up writing the entire function in router.post
 // need to figure out how to import the function and replace the RECIEVER_EMAIL with req.body.email
-// require("dotenv").config();
-// const nodeMailer= require("nodemailer");
-// const { mailFunction } = require("../../nodemailer/mail-app.js");
+// const mailFunction = require("../../nodemailer/mail-app.js");
+const nodeMailer= require("nodemailer");
+require("dotenv").config();
 
 // CREATE new user
 router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
       username: req.body.username,
-      email: req.body.email,
+      email: req.body.email, 
       password: req.body.password,
     });
+
+    console.log(req.body.email);
+    userMail = req.body.mail;
 
     req.session.save(() => {
       req.session.loggedIn = true;
 
       // send a confirmation email to the new user upon signup
-      // currently can only send an email to the email specified in .env file 
-      const nodeMailer = require("../../nodemailer/mail-app.js");
+      async function mailFunction() {
+
+        const emailContent = `
+        <p>Thank you for signing up to the I Have No Shelf Controll book forum!</p>
+        `;
+
+        const transporter = nodeMailer.createTransport({
+          host: "smtp-mail.outlook.com", 
+          port: 587,
+          secure: false,
+          requireTLS: true,
+          logger: true,
+          auth: {
+            user: process.env.SENDER_EMAIL,
+            pass: process.env.SENDER_PASSWORD
+          }
+        });
+
+        const info = await transporter.sendMail({
+          from: `Shelf Controll Book forum <${process.env.SENDER_EMAIL}>`,
+          to: req.body.email,
+          subject: "Sign up confirmation",
+          html: emailContent
+        });
+        console.log("message sent: " + info.messageId);
+      };
+
+      mailFunction();
 
       res.status(200).json(dbUserData);
     });

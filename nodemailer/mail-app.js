@@ -21,13 +21,13 @@ async function mailFunction() {
 
 	const info = await transporter.sendMail({
 		from: `Shelf Controll Book forum <${process.env.SENDER_EMAIL}>`,
-		to: process.env.RECEIVER_EMAIL,
+		to: process.env.SENDER_EMAIL,
 		subject: "Sign up confirmation",
 		html: emailContent
 	});
 	console.log("message sent: " + info.messageId);
 };
 
-mailFunction().catch(error => console.log(error));
+// mailFunction().catch(error => console.log(error));
 
 module.exports = mailFunction;
