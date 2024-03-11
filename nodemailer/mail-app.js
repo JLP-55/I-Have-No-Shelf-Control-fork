@@ -1,16 +1,18 @@
 require("dotenv").config();
-const nodeMailer = require("nodemailer");
+const nodeMailer= require("nodemailer");
 
-const emailContent = `
-<p>This is the content of the email!</p>
-`;
+async function mailFunction() {
 
-async function main() {
+	const emailContent = `
+	<p>Thank you for signing up to the I Have No Shelf Controll book forum!</p>
+	`;
 
 	const transporter = nodeMailer.createTransport({
 		host: "smtp-mail.outlook.com", 
 		port: 587,
 		secure: false,
+		requireTLS: true,
+		logger: true,
 		auth: {
 			user: process.env.SENDER_EMAIL,
 			pass: process.env.SENDER_PASSWORD
@@ -20,10 +22,12 @@ async function main() {
 	const info = await transporter.sendMail({
 		from: `Shelf Controll Book forum <${process.env.SENDER_EMAIL}>`,
 		to: process.env.RECEIVER_EMAIL,
-		subject: "test email",
+		subject: "Sign up confirmation",
 		html: emailContent
 	});
 	console.log("message sent: " + info.messageId);
 };
 
-main().catch(error => console.log(error));
+mailFunction().catch(error => console.log(error));
+
+module.exports = mailFunction;

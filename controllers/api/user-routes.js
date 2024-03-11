@@ -1,6 +1,12 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// prerequisites for nodemailer if end up writing the entire function in router.post
+// need to figure out how to import the function and replace the RECIEVER_EMAIL with req.body.email
+// require("dotenv").config();
+// const nodeMailer= require("nodemailer");
+// const { mailFunction } = require("../../nodemailer/mail-app.js");
+
 // CREATE new user
 router.post('/', async (req, res) => {
   try {
@@ -12,6 +18,10 @@ router.post('/', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
+
+      // send a confirmation email to the new user upon signup
+      // currently can only send an email to the email specified in .env file 
+      const nodeMailer = require("../../nodemailer/mail-app.js");
 
       res.status(200).json(dbUserData);
     });
