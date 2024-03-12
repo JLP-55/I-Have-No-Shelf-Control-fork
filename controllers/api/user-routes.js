@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
       async function mailFunction() {
 
         const emailContent = `
-        <p>Thank you for signing up to the I Have No Shelf Controll book forum!</p>
+        <p>Thank you for signing up to the I Have No Shelf Control book forum!</p>
         `;
 
         const transporter = nodeMailer.createTransport({
