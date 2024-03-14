@@ -34,6 +34,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
+      window.alert("An email has been sent to your account. If you are unable to find it try checking spam.");
       document.location.replace('/');
     } else {
       alert('Failed to sign up.');
