@@ -100,6 +100,11 @@ The authors acknowledge and credit those who have contributed to this project, i
 *	https://git.bootcampcontent.com/Monash-University/MONU-VIRT-FSF-PT-11-2023-U-LOLC
 *	Chee Ho Tai
 *	Pranita Shrestha
+The authors acknowledge and credit those who have contributed to this project, including:
+*	https://git.bootcampcontent.com/Monash-University/MONU-VIRT-FSF-PT-11-2023-U-LOLC
+
+Book cover images referenced from:
+*	https://www.goodreads.com
 
 ## 8. License
 
