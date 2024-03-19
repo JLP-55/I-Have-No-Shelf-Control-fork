@@ -15,20 +15,20 @@ Painting.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    artist: {
+    author: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    exhibition_date: {
-      type: DataTypes.DATE,
+    year_of_publication: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     filename: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
-      type: DataTypes.STRING,
+    summary: {
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     gallery_id: {

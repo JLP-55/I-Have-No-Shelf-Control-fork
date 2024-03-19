@@ -1,30 +1,3 @@
-============================= NOTES =========================
-
-```diff
-- delete this section when finished
-```
-
-Make a .env file and paste this into it:
-
-DB_NAME='museum_db'   \
-DB_USER='root'        \
-DB_PASSWORD=''      
-
-Files/folders that can probably remain unchanged:
-
-- Connection.js
-- Server.js
--	Entire utils folder:
-    - utils/Auth.js
-    - utils/Helpers.js
-- User-routes.js
-- Controllers/api:
-   - controllers/api/User-routes.js
-   - controllers/api/Index.js
-
-
-============================= NOTES =========================
-
 # I Have No Shelf Control Book Review Database
 
 ## Table of Contents
@@ -63,16 +36,25 @@ Clone the Git repo and open in a code editor such as Visual Studio Code. This ap
 
 Installation instructions:
 
-- NODE: npm install i
-- Create an .env file and add env variables
+- NODE: npm install 
+- Create an .env file and add env variables:
+
+            copy paste this into the .env file:
+
+                DB_NAME='shelf_controll_db'
+                DB_USER='root'
+                DB_PASSWORD=' '                            <---- enter your mysql password in the quotes
+                SENDER_EMAIL="shelfcontroll@outlook.com"
+                SENDER_PASSWORD="$h3ll*fc0ntro1l"
+
 - MySQL: mysql -u root -p
     - MySql database: SOURCE db/schema.sql
     - Exit;
     - npm run seed
 - Add     "watch": "nodemon server.js"   to package-json, under "scripts"
 - APP: 
-    * npm run watch [for nodemon server] 
-    * npm start [for regular server]
+    * npm run watch [for nodemon server]  <----- this automatically updates server every time you make a change
+    * npm start [for non-updating regular server]
 - Open [http://localhost:3001](http://localhost:3001/) in browser
 
 Link to GitHub Repo:

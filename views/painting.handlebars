@@ -2,7 +2,57 @@
   <img src="/images/{{painting.filename}}" alt="{{painting.description}}">
   <div class="painting-details">
     <h3>{{painting.title}}</h3>
-    <p>By: {{painting.artist}}</p>
-    <p>Exhibition open until: {{ format_date painting.exhibition_date}}</p>
+    <p>By: {{painting.author}}</p>
+    {{!-- <p>Exhibition open until: {{ format_date painting.exhibition_date}}</p> --}}
+    <p>Year of Publication: {{ painting.year_of_publication }}</p>
+    <p>Book description: {{ painting.summary}}</p>
+
+
+
+        <!-- User can only leave a book review if logged in -->	
+
+{{#if loggedIn}}
+
+<div class="card">
+    <h3 class="card-header">Create New Review</h3>
+    <form class="card-body new-review-form" id="new-review-form">
+        <label for="review-title" class="form-label">Title</label>
+        <input type="text" id="review-title" name="review-title" class="form-input" />
+        <label class="form-label" for="content">Review</label>
+        <input id="content" name="content" class="form-input" />
+        <button type="submit" class="btn">Create</button>
+    </form>
+
+    </div>
+
+    <div class="card">
+    <h3 class="card-header"></h3>
+    <form class="card-body comment-form" id="comment-form">
+
+        <label class="form-label">Leave a Comment</label>
+        <input id="comment" name="comment-body" class="form-input" />
+
+        <button type="submit" class="btn">Submit</button>
+    </form>
+
+{{/if}}
+
+
+
+
+
+
+
+<main id="review-posts">
+        <!-- Reviews should appear here -->
+    </main>
+
+
+<script src="/js/addReview.js"></script>
+
+
   </div>
 </section>
+
+
+
