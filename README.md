@@ -96,15 +96,19 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 ## 7. Authors and acknowledgment
 
-The authors acknowledge and credit those who have contributed to this project, including:
+This respository was made in collaboration with:
+* Troy [GitHub](https://github.com/sifzerda)
+* Jack [GitHub](https://github.com/JLP-55)
+* Ben [GitHub](https://github.com/BenRodwell)
+* Henry [GitHub](https://github.com/hr-virieux)
+
+The authors acknowledge and credit those who have helped contribute to this project, including:
 *	https://git.bootcampcontent.com/Monash-University/MONU-VIRT-FSF-PT-11-2023-U-LOLC
-*	Chee Ho Tai
-*	Pranita Shrestha
-The authors acknowledge and credit those who have contributed to this project, including:
-*	https://git.bootcampcontent.com/Monash-University/MONU-VIRT-FSF-PT-11-2023-U-LOLC
+*	Chee Ho Tai [GitHub](https://github.com/cupacheeno)
+*	Pranita Shrestha [GitHub](https://github.com/shrestha-pranita)
 
 Book cover images referenced from:
-*	https://www.goodreads.com
+*	[goodreads](https://www.goodreads.com)
 
 ## 8. License
 
