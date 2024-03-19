@@ -112,8 +112,8 @@ main {
 
 aside {
   flex: 0;
-background: #F4F5F7;
-background: linear-gradient(0deg, #F4F5F7, #0366BD);
+background: #0366BD;
+
   padding: 80px;
   text-align: left;
   color: var(--light);

@@ -6,7 +6,9 @@ router.get("/", (req, res) => {
       res.redirect('/login');
     };
 
-	res.render("addBook");
+	res.render("addBook", {
+    loggedIn: req.session.loggedIn
+  });
   // res.status(200).json({message: "ok"});
 })
 

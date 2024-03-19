@@ -50,7 +50,7 @@ router.post('/', async (req, res) => {
         console.log("message sent: " + info.messageId);
       };
 
-      mailFunction();
+     mailFunction();
 
       res.status(200).json(dbUserData);
     });

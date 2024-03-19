@@ -3,7 +3,7 @@ const { Review, User, Comment } = require('../../models');
 //const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
 
-// ============================== GET all posts ============================ //
+// ============================== GET all reviews ============================ //
 
 router.get('/', async (req, res) => {
     console.log('test get all reviews');
@@ -15,7 +15,6 @@ router.get('/', async (req, res) => {
                 'content', 
                 'created_at'
             ],
-            order: [['created_at', 'DESC']],
             include: [{
                 model: User,
                 attributes: ['username'],
@@ -29,7 +28,7 @@ router.get('/', async (req, res) => {
     }
   });
 
-  // ============================== GET one post by id ============================ //
+  // ============================== GET one review by id ============================ //
 
 router.get('/:id', async (req, res) => {
       try {
@@ -52,8 +51,8 @@ router.get('/:id', async (req, res) => {
               model: Comment,
               attributes: [
                 'id', 
-                'comment_content', 
-                'post_id', 
+                'comment_body', 
+                'review_id', 
                 'user_id', 
                 'created_at'
               ], 
