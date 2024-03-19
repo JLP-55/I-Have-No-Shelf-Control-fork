@@ -79,6 +79,9 @@ Link to GitHub Repo:
 
 [https://github.com/BenRodwell/I-Have-No-Shelf-Control](https://github.com/BenRodwell/I-Have-No-Shelf-Control)
 
+Linked to deployed web app:
+[https://project27-9e19fd8d284f.herokuapp.com/](https://project27-9e19fd8d284f.herokuapp.com/)
+
 ## 5. Support
 
 For support, users can contact the contributors through the github repo.
