@@ -14,9 +14,11 @@
 
 ## 1. Description
 
-```diff
-- Add project description here
-```
+Our application provides a platform for users to review and discuss books. Features include:
+- The ability to create an account to join discussions;
+- Users can favourite books as a reference of what to read in the future;
+- Reviews can be left by users to get a community rating on books.
+
 
 ## 2. Badges
 
