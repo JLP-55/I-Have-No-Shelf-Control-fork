@@ -33,7 +33,7 @@
     const bookSummary = document.querySelector('#summary').value.trim();
   
     if (bookTitle && bookAuthor && bookGenre && bookYear && bookSummary) {
-      const response = await fetch('/api/users', {     // ================== Add a Book Event Handler =================== //
+      const response = await fetch('/api/add_book-routes', {     // ================== Add a Book Event Handler =================== //
         method: 'POST',
         body: JSON.stringify({ bookTitle, bookAuthor, bookGenre, bookYear, bookSummary }),
         headers: { 'Content-Type': 'application/json' },
@@ -49,7 +49,7 @@
 // ====================== adding a book function =============== //
 
 const addBook = async () => {
-    const response = await fetch("/api/addBooks", {
+    const response = await fetch("/api/add_book-routes", {
    method: "POST",
      headers: {"Content-type": "applocation/json"},
     });
