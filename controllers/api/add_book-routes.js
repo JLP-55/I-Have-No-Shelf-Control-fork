@@ -4,11 +4,12 @@ const { Gallery, Painting } = require("../../models");
 router.get("/", (req, res) => {
     if (!req.session.loggedIn) {
       res.redirect('/login');
-    };
+    } else {
+     res.render("addBook", {
+      loggedIn: req.session.loggedIn
+    });
+   };
 
-	res.render("addBook", {
-    loggedIn: req.session.loggedIn
-  });
   // res.status(200).json({message: "ok"});
 })
 
